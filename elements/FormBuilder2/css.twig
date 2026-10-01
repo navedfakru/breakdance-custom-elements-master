@@ -1,0 +1,30 @@
+%%SELECTOR%% {
+  {{ macros.spacing_margin_y(design.spacing) }}
+  {{ macros.formContainer(design.container) }}
+}
+
+{{ macros.atomV1FormCss(design.form, '%%SELECTOR%%', breakpoint, globalSettings) }}
+
+{# Layout comes after the form design so its gap wins over "space between fields". #}
+%%SELECTOR%% .bde-fb2__form {
+  {% if design.layout.display == 'horizontal' %}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: {{ design.layout.wrap ? 'wrap' : 'nowrap' }};
+  {% elseif design.layout.display == 'grid' %}
+    display: grid;
+    grid-template-columns: repeat({{ design.layout.columns|default(2) }}, minmax(0, 1fr));
+  {% elseif design.layout.display == 'vertical' %}
+    display: flex;
+    flex-direction: column;
+  {% endif %}
+  {% if design.layout.gap.style %}
+    gap: {{ design.layout.gap.style }};
+  {% endif %}
+  {% if design.layout.align_items %}
+    align-items: {{ design.layout.align_items }};
+  {% endif %}
+  {% if design.layout.justify_content %}
+    justify-content: {{ design.layout.justify_content }};
+  {% endif %}
+}

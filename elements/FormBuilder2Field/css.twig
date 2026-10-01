@@ -1,0 +1,12 @@
+%%SELECTOR%% {
+  {% if design.size.width.style %}
+    width: {{ design.size.width.style }};
+  {% endif %}
+  {% if design.size.grow %}
+    flex: 1 1 0;
+  {% endif %}
+  {% if design.size.grid_span %}
+    grid-column: span {{ design.size.grid_span }};
+  {% endif %}
+  {{ macros.spacing_margin_y(design.spacing) }}
+}

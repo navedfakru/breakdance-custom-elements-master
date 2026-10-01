@@ -1,0 +1,18 @@
+%%SELECTOR%% {
+  {% if design.layout.align %}
+    justify-content: {{ design.layout.align }};
+  {% endif %}
+  {% if design.layout.width.style %}
+    width: {{ design.layout.width.style }};
+  {% endif %}
+  {% if design.layout.grid_span %}
+    grid-column: span {{ design.layout.grid_span }};
+  {% endif %}
+  {{ macros.spacing_margin_y(design.spacing) }}
+}
+
+{% if design.layout.full_width %}
+  %%SELECTOR%% .breakdance-form-button__submit {
+    width: 100%;
+  }
+{% endif %}

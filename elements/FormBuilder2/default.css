@@ -1,0 +1,38 @@
+.bde-form-builder-2 {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* The form is a free-layout container: children decide the structure. */
+.bde-form-builder-2 .bde-fb2__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.bde-form-builder-2 .bde-fb2__form.breakdance-form--hidden {
+  display: none;
+}
+
+/* Hidden helper inputs (honeypot / csrf) must not take a slot in the layout. */
+.bde-form-builder-2 .bde-fb2__form > .breakdance-form-field--hidden,
+.bde-form-builder-2 .bde-fb2__form > .breakdance-form-field--hpinput {
+  position: absolute;
+}
+
+.bde-fb2-field,
+.bde-fb2-submit {
+  min-width: 0;
+}
+
+.bde-fb2-field > .breakdance-form-field {
+  height: 100%;
+}
+
+.bde-fb2-submit {
+  display: flex;
+}
+
+.bde-fb2-submit .breakdance-form-button__submit {
+  grid-column-start: auto;
+}
