@@ -1,0 +1,49 @@
+%%SELECTOR%% {
+  {% if design.loading.opacity is not empty %}--pl2-loading-opacity: {{ design.loading.opacity }};{% endif %}
+  {{ macros.spacing_margin_y(design.spacing) }}
+}
+
+{# ---------- Items grid ---------- #}
+%%SELECTOR%% .bde-pl2-items {
+  {% if design.items.display == 'list' %}
+    display: flex;
+    flex-direction: column;
+  {% elseif design.items.min_item_width.style %}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min({{ design.items.min_item_width.style }}, 100%), 1fr));
+  {% elseif design.items.columns %}
+    display: grid;
+    grid-template-columns: repeat({{ design.items.columns }}, minmax(0, 1fr));
+  {% endif %}
+  {% if design.items.gap.style %}gap: {{ design.items.gap.style }};{% endif %}
+  {% if design.items.align_items %}align-items: {{ design.items.align_items }};{% endif %}
+}
+
+{# ---------- Pagination ---------- #}
+%%SELECTOR%% .bde-pl2-pagination {
+  {% if design.pagination.spacing.style %}margin-top: {{ design.pagination.spacing.style }};{% endif %}
+  {% if design.pagination.justify %}--pl2-justify: {{ design.pagination.justify }};{% endif %}
+  {% if design.pagination.gap.style %}--pl2-gap: {{ design.pagination.gap.style }};{% endif %}
+  {% if design.pagination.links.size.style %}--pl2-size: {{ design.pagination.links.size.style }};{% endif %}
+  {% if design.pagination.links.icon_size.style %}--pl2-icon-size: {{ design.pagination.links.icon_size.style }};{% endif %}
+  {% if design.pagination.links.padding_x.style %}--pl2-padding-x: {{ design.pagination.links.padding_x.style }};{% endif %}
+  {% if design.pagination.links.font_size.style %}--pl2-font-size: {{ design.pagination.links.font_size.style }};{% endif %}
+  {% if design.pagination.links.font_weight %}--pl2-font-weight: {{ design.pagination.links.font_weight }};{% endif %}
+  {% if design.pagination.links.radius.style %}--pl2-radius: {{ design.pagination.links.radius.style }};{% endif %}
+  {% if design.pagination.links.border_width.style %}--pl2-border-width: {{ design.pagination.links.border_width.style }};{% endif %}
+  {% if design.pagination.links.color %}--pl2-color: {{ design.pagination.links.color }};{% endif %}
+  {% if design.pagination.links.background %}--pl2-bg: {{ design.pagination.links.background }};{% endif %}
+  {% if design.pagination.links.border_color %}--pl2-border: {{ design.pagination.links.border_color }};{% endif %}
+  {% if design.pagination.hover.color %}--pl2-hover-color: {{ design.pagination.hover.color }};{% endif %}
+  {% if design.pagination.hover.background %}--pl2-hover-bg: {{ design.pagination.hover.background }};{% endif %}
+  {% if design.pagination.hover.border_color %}--pl2-hover-border: {{ design.pagination.hover.border_color }};{% endif %}
+  {% if design.pagination.active.color %}--pl2-active-color: {{ design.pagination.active.color }};{% endif %}
+  {% if design.pagination.active.background %}--pl2-active-bg: {{ design.pagination.active.background }};{% endif %}
+  {% if design.pagination.active.border_color %}--pl2-active-border: {{ design.pagination.active.border_color }};{% endif %}
+}
+
+{% if design.pagination.full_width_button %}
+%%SELECTOR%% .bde-pl2-pagination__loadmore {
+  flex: 1 1 100%;
+}
+{% endif %}

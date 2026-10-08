@@ -1,0 +1,18 @@
+%%SELECTOR%% {
+  {% if design.layout.display == 'list' %}
+    display: flex;
+    flex-direction: column;
+  {% elseif design.layout.min_item_width.style %}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min({{ design.layout.min_item_width.style }}, 100%), 1fr));
+  {% elseif design.layout.columns %}
+    display: grid;
+    grid-template-columns: repeat({{ design.layout.columns }}, minmax(0, 1fr));
+  {% endif %}
+  {% if design.layout.gap.style %}
+    gap: {{ design.layout.gap.style }};
+  {% endif %}
+  {% if design.layout.align_items %}
+    align-items: {{ design.layout.align_items }};
+  {% endif %}
+}

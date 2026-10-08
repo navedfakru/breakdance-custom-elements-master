@@ -1,0 +1,26 @@
+%%SELECTOR%% {
+  {% if design.layout.justify %}--pl2-justify: {{ design.layout.justify }};{% endif %}
+  {% if design.layout.gap.style %}--pl2-gap: {{ design.layout.gap.style }};{% endif %}
+  {% if design.links.size.style %}--pl2-size: {{ design.links.size.style }};{% endif %}
+  {% if design.links.icon_size.style %}--pl2-icon-size: {{ design.links.icon_size.style }};{% endif %}
+  {% if design.links.padding_x.style %}--pl2-padding-x: {{ design.links.padding_x.style }};{% endif %}
+  {% if design.links.font_size.style %}--pl2-font-size: {{ design.links.font_size.style }};{% endif %}
+  {% if design.links.font_weight %}--pl2-font-weight: {{ design.links.font_weight }};{% endif %}
+  {% if design.links.radius.style %}--pl2-radius: {{ design.links.radius.style }};{% endif %}
+  {% if design.links.border_width.style %}--pl2-border-width: {{ design.links.border_width.style }};{% endif %}
+  {% if design.links.color %}--pl2-color: {{ design.links.color }};{% endif %}
+  {% if design.links.background %}--pl2-bg: {{ design.links.background }};{% endif %}
+  {% if design.links.border_color %}--pl2-border: {{ design.links.border_color }};{% endif %}
+  {% if design.hover.color %}--pl2-hover-color: {{ design.hover.color }};{% endif %}
+  {% if design.hover.background %}--pl2-hover-bg: {{ design.hover.background }};{% endif %}
+  {% if design.hover.border_color %}--pl2-hover-border: {{ design.hover.border_color }};{% endif %}
+  {% if design.active.color %}--pl2-active-color: {{ design.active.color }};{% endif %}
+  {% if design.active.background %}--pl2-active-bg: {{ design.active.background }};{% endif %}
+  {% if design.active.border_color %}--pl2-active-border: {{ design.active.border_color }};{% endif %}
+}
+
+{% if design.layout.full_width_button %}
+%%SELECTOR%% .bde-pl2-pagination__loadmore {
+  flex: 1 1 100%;
+}
+{% endif %}
