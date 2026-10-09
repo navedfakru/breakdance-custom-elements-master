@@ -49,7 +49,7 @@ class PostLoop2Items extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-pl2-items';
+        return 'bdoxce-pl2-items';
     }
 
     static function category()

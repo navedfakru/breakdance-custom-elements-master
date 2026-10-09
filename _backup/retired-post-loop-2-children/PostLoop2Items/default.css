@@ -1,4 +1,4 @@
-.bde-pl2-items {
+.bdoxce-pl2-items {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
@@ -10,15 +10,15 @@
 }
 
 /* Items (global block roots or the optional wrapper) never overflow their column. */
-.bde-pl2-items > * {
+.bdoxce-pl2-items > * {
   min-width: 0;
 }
 
-.bde-pl2-items:focus {
+.bdoxce-pl2-items:focus {
   outline: none;
 }
 
-.bde-pl2-items__empty {
+.bdoxce-pl2-items__empty {
   grid-column: 1 / -1;
   padding: 40px 20px;
   text-align: center;

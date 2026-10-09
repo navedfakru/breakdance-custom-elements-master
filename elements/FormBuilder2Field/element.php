@@ -50,7 +50,7 @@ class FormBuilder2Field extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-fb2-field';
+        return 'bdoxce-fb2-field';
     }
 
     static function template()

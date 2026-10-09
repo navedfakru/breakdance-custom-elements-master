@@ -40,7 +40,7 @@ class FormBuilder2 extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-form-builder-2';
+        return 'bdoxce-form-builder-2';
     }
 
     static function category()
@@ -1664,7 +1664,7 @@ class FormBuilder2 extends \Breakdance\Elements\Element
 
     static function dependencies()
     {
-        return ['0' =>  ['styles' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/awesome-form@1/css/form.css'],],'1' =>  ['scripts' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/maska@3/maska.js'],'builderCondition' => 'return false;',],'2' =>  ['scripts' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/awesome-form@1/js/form.js'],'inlineScripts' => ['breakdanceForm.init(\'%%SELECTOR%% .bde-fb2__form\')'],'builderCondition' => 'return false;',],'3' =>  ['inlineStyles' => ['%%SELECTOR%% .breakdance-form-button__submit, %%SELECTOR%% .breakdance-form-field .breakdance-form-file-upload, %%SELECTOR%% .breakdance-form-field .breakdance-form-field__label {pointer-events: none}'],'frontendCondition' => 'return false;',],];
+        return ['0' =>  ['styles' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/awesome-form@1/css/form.css'],],'1' =>  ['scripts' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/maska@3/maska.js'],'builderCondition' => 'return false;',],'2' =>  ['scripts' => ['%%BREAKDANCE_ELEMENTS_PLUGIN_URL%%dependencies-files/awesome-form@1/js/form.js'],'inlineScripts' => ['breakdanceForm.init(\'%%SELECTOR%% .bdoxce-fb2__form\')'],'builderCondition' => 'return false;',],'3' =>  ['inlineStyles' => ['%%SELECTOR%% .breakdance-form-button__submit, %%SELECTOR%% .breakdance-form-field .breakdance-form-file-upload, %%SELECTOR%% .breakdance-form-field .breakdance-form-field__label {pointer-events: none}'],'frontendCondition' => 'return false;',],];
     }
 
     static function settings()

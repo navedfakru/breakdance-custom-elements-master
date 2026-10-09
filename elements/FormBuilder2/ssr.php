@@ -45,7 +45,7 @@ if (!empty($content['advanced']['csrf_enabled'])) {
     ], 0, $content);
 }
 ?>
-<form id="<?php echo esc_attr($formId); ?>" class="breakdance-form bde-fb2__form" data-options="<?php echo esc_attr(wp_json_encode($options)); ?>" data-steps="0">
+<form id="<?php echo esc_attr($formId); ?>" class="breakdance-form bdoxce-fb2__form" data-options="<?php echo esc_attr(wp_json_encode($options)); ?>" data-steps="0">
 %%CHILDREN%%
 <?php echo $extraFields; ?>
 <input type="hidden" name="form_id" value="%%ID%%">

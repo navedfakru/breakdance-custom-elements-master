@@ -49,7 +49,7 @@ class FormBuilder2Submit extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-fb2-submit';
+        return 'bdoxce-fb2-submit';
     }
 
     static function template()

@@ -37,7 +37,7 @@ class FormBuilder2 extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-form-builder-2';
+        return 'bdoxce-form-builder-2';
     }
 
     static function template()

@@ -7,9 +7,9 @@
  * Author: Breakdance
  * Author URI: https://breakdance.com/
  * License: GPLv2
- * Text Domain: breakdance, oxygen
+ * Text Domain: breakdance
  * Domain Path: /languages/
- * Version: 1.0.1
+ * Version: 1.0.2
  */
 
 namespace BreakdanceCustomElements;

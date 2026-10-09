@@ -4,7 +4,7 @@
 }
 
 {# ---------- Items grid ---------- #}
-%%SELECTOR%% .bde-pl2-items {
+%%SELECTOR%% .bdoxce-pl2-items {
   {% if design.items.display == 'list' %}
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 {# ---------- Pagination ---------- #}
-%%SELECTOR%% .bde-pl2-pagination {
+%%SELECTOR%% .bdoxce-pl2-pagination {
   {% if design.pagination.spacing.style %}margin-top: {{ design.pagination.spacing.style }};{% endif %}
   {% if design.pagination.justify %}--pl2-justify: {{ design.pagination.justify }};{% endif %}
   {% if design.pagination.gap.style %}--pl2-gap: {{ design.pagination.gap.style }};{% endif %}
@@ -43,7 +43,7 @@
 }
 
 {% if design.pagination.full_width_button %}
-%%SELECTOR%% .bde-pl2-pagination__loadmore {
+%%SELECTOR%% .bdoxce-pl2-pagination__loadmore {
   flex: 1 1 100%;
 }
 {% endif %}

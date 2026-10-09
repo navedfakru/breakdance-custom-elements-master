@@ -31,7 +31,7 @@ if (!$query->have_posts()) {
         echo \Breakdance\Render\renderGlobalBlock($emptyBlockId);
     } else {
         $message = $items['empty_message'] ?? 'No posts found.';
-        echo '<div class="bde-pl2-items__empty">' . esc_html($message) . '</div>';
+        echo '<div class="bdoxce-pl2-items__empty">' . esc_html($message) . '</div>';
     }
     return 1; // Breakdance treats a falsy include result as "no ssr.php file".
 }
@@ -45,7 +45,7 @@ while ($query->have_posts()) {
     $html = \Breakdance\Render\renderGlobalBlock($blockId, get_the_ID());
 
     if ($itemTag) {
-        echo '<' . $itemTag . ' class="bde-pl2-item">' . $html . '</' . $itemTag . '>';
+        echo '<' . $itemTag . ' class="bdoxce-pl2-item">' . $html . '</' . $itemTag . '>';
     } else {
         echo $html;
     }

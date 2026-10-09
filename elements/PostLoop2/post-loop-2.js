@@ -6,13 +6,13 @@
  * Links stay real <a href> links: without JS (or if a request fails) they just navigate.
  */
 (function () {
-    if (window.BdePostLoop2) return;
+    if (window.bdoxcePostLoop2) return;
 
     var cache = new Map();
 
     function fetchDoc(url) {
         if (!cache.has(url)) {
-            var request = fetch(url, { credentials: 'same-origin', headers: { 'X-Requested-With': 'BdePostLoop2' } })
+            var request = fetch(url, { credentials: 'same-origin', headers: { 'X-Requested-With': 'bdoxcePostLoop2' } })
                 .then(function (r) {
                     if (!r.ok) throw new Error('HTTP ' + r.status);
                     return r.text();
@@ -30,13 +30,13 @@
     }
 
     function closestLoop(node) {
-        return node && node.closest ? node.closest('.bde-post-loop-2') : null;
+        return node && node.closest ? node.closest('.bdoxce-post-loop-2') : null;
     }
 
     function setBusy(loop, busy) {
         loop.classList.toggle('is-pl2-loading', busy);
         loop.setAttribute('aria-busy', busy ? 'true' : 'false');
-        loop.querySelectorAll('.bde-pl2-items').forEach(function (items) {
+        loop.querySelectorAll('.bdoxce-pl2-items').forEach(function (items) {
             if (busy) {
                 items.style.minHeight = items.offsetHeight + 'px';
                 items.style.position = 'relative';
@@ -58,14 +58,14 @@
     }
 
     function focusItems(loop) {
-        var items = loop.querySelector('.bde-pl2-items');
+        var items = loop.querySelector('.bdoxce-pl2-items');
         if (!items) return;
         if (!items.hasAttribute('tabindex')) items.setAttribute('tabindex', '-1');
         items.focus({ preventScroll: true });
     }
 
     function announce(loop, doc) {
-        loop.dispatchEvent(new CustomEvent('bde:post-loop-2:loaded', { bubbles: true, detail: { loop: loop, doc: doc } }));
+        loop.dispatchEvent(new CustomEvent('bdoxce:post-loop-2:loaded', { bubbles: true, detail: { loop: loop, doc: doc } }));
     }
 
     /** Replace the whole loop with the same loop from page `url`. */
@@ -108,8 +108,8 @@
                 var fresh = doc.querySelector(selector);
                 if (!fresh) throw new Error('Post Loop 2 not found on ' + url);
 
-                var items = loop.querySelector('.bde-pl2-items');
-                var freshItems = fresh.querySelector('.bde-pl2-items');
+                var items = loop.querySelector('.bdoxce-pl2-items');
+                var freshItems = fresh.querySelector('.bdoxce-pl2-items');
                 var firstNew = null;
 
                 if (items && freshItems) {
@@ -122,7 +122,7 @@
                     items.appendChild(fragment);
                 }
 
-                var pagination = button.closest('.bde-pl2-pagination');
+                var pagination = button.closest('.bdoxce-pl2-pagination');
                 var freshPagination = pagination && pagination.className
                     ? fresh.querySelector('.' + pagination.className.trim().split(/\s+/).join('.'))
                     : null;
@@ -153,7 +153,7 @@
     function paginationLink(event, loop) {
         var link = event.target.closest && event.target.closest('a[href]');
         if (!link) return null;
-        var pagination = link.closest('.bde-pl2-pagination');
+        var pagination = link.closest('.bdoxce-pl2-pagination');
         if (!pagination || closestLoop(pagination) !== loop) return null;
         return link;
     }
@@ -196,7 +196,7 @@
         if (loop) goTo(loop, window.location.href, false);
     });
 
-    window.BdePostLoop2 = {
+    window.bdoxcePostLoop2 = {
         init: function (selector) {
             document.querySelectorAll(selector).forEach(function (loop) {
                 bind(loop, selector);

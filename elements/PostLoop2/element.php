@@ -16,9 +16,9 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
  * query + repeated Global Block (items grid) + pagination + AJAX.
  *
  * Output:
- *   <div class="bde-post-loop-2">
- *     <div class="bde-pl2-items">…items…</div>
- *     <nav class="bde-pl2-pagination">…</nav>
+ *   <div class="bdoxce-post-loop-2">
+ *     <div class="bdoxce-pl2-items">…items…</div>
+ *     <nav class="bdoxce-pl2-pagination">…</nav>
  *   </div>
  * The pagination is always a sibling of the items grid, never inside it.
  */
@@ -51,7 +51,7 @@ class PostLoop2 extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-post-loop-2';
+        return 'bdoxce-post-loop-2';
     }
 
     static function category()
@@ -324,7 +324,7 @@ class PostLoop2 extends \Breakdance\Elements\Element
         return [
             [
                 'scripts' => [plugins_url('post-loop-2.js', __FILE__) . '?ver=1.1.0'],
-                'inlineScripts' => ["window.BdePostLoop2 && window.BdePostLoop2.init('%%SELECTOR%%');"],
+                'inlineScripts' => ["window.bdoxcePostLoop2 && window.bdoxcePostLoop2.init('%%SELECTOR%%');"],
                 'builderCondition' => 'return false;',
                 'frontendCondition' => "return {{ content.ajax.enable ? 'true' : 'false' }};",
                 'title' => 'Post Loop 2 - AJAX',

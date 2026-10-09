@@ -48,7 +48,7 @@ class PostLoop2Pagination extends \Breakdance\Elements\Element
 
     static function className()
     {
-        return 'bde-pl2-pagination';
+        return 'bdoxce-pl2-pagination';
     }
 
     static function category()
