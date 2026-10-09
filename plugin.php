@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
+ * Plugin Name: Breakdance Oxygen Custom Elements
  * Plugin URI: https://breakdance.com/
  * Description: Boilerplate plugin to save your custom elements created with Element Studio.
  * Author: Breakdance
  * Author URI: https://breakdance.com/
  * License: GPLv2
- * Text Domain: breakdance
+ * Text Domain: breakdance, oxygen
  * Domain Path: /languages/
- * Version: 0.0.1
+ * Version: 1.0.1
  */
 
 namespace BreakdanceCustomElements;
